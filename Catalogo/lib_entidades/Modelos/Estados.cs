@@ -7,10 +7,5 @@ namespace lib_entidades.Modelos
     {
         [Key] public int Id { get; set; }
         public string? Nombre { get; set; }
-
-        public void CambiarEstado()
-        {
-            // contenido del método
-        }
     }
 }

@@ -20,17 +20,5 @@ namespace lib_entidades.Modelos
         {
             // contenido del método
         }
-        public void FiltrarRangoPrecio()
-        {
-            // contenido del método
-        }
-        public void AgregarImagen()
-        {
-            // contenido del método
-        }
-        public void RemoverImagen()
-        {
-            // contenido del método
-        }
     }
 }

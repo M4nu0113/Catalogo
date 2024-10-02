@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vqK7FXdHspQ=",
+  "dgSpecHash": "Kdp4Jyttqik=",
   "success": true,
-  "projectFilePath": "C:\\Users\\manue\\OneDrive\\Documentos\\Programacion-de-software\\PjCatalogo\\Catalogo\\lib_entidades\\lib_entidades.csproj",
+  "projectFilePath": "C:\\Users\\manue\\OneDrive\\Documentos\\Programacion-de-software\\PjCatalogo\\ProyectoCatalogo\\Catalogo\\lib_entidades\\lib_entidades.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\manue\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
     "C:\\Users\\manue\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.8\\microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512",

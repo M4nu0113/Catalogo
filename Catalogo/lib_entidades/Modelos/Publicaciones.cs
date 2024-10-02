@@ -25,5 +25,13 @@ namespace lib_entidades.Modelos
         {
             // contenido del método
         }
+        public void CambiarEstado()
+        {
+            // contenido del método
+        }
+        public void FiltrarRangoPrecio()
+        {
+            // contenido del método
+        }
     }
 }
