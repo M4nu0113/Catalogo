@@ -8,6 +8,13 @@ namespace lib_entidades.Modelos
         [Key] public int Id { get; set; }
         public string? Categoria { get; set; }
 
+        public bool Validar()
+        {
+            if (string.IsNullOrEmpty(Categoria))
+                return false;
+            return true;
+        }
+
         public void FiltrarProductoCategoria()
         {
             // contenido del método

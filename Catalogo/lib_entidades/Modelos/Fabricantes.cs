@@ -9,6 +9,13 @@ namespace lib_entidades.Modelos
         public string? Nombre { get; set; }
         public string? Contacto { get; set; }
 
+        public bool Validar()
+        {
+            if (string.IsNullOrEmpty(Nombre) || string.IsNullOrEmpty(Contacto))
+                return false;
+            return true;
+        }
+
         public void FiltrarProductoFabricantes()
         {
             // contenido del método

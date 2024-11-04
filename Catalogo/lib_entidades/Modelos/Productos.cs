@@ -16,6 +16,25 @@ namespace lib_entidades.Modelos
 
         [NotMapped] public Fabricantes? _Fabricante { get; set; }
         [NotMapped] public Categorias? _Categoria { get; set; }
+
+        public bool Validar()
+        {
+            if (string.IsNullOrEmpty(Codigo))
+                return false;
+            if (string.IsNullOrEmpty(Nombre))
+                return false;
+            if (Cantidad == 0)
+                return false;
+            if (Precio == 0)
+                return false;
+            if (Costo == 0)
+                return false;
+            if (_Categoria == null) 
+                return false;
+            if(_Fabricante == null)
+                return false;
+            return true;
+        }
         public void ObtenerPublicaciones()
         {
             // contenido del método

@@ -12,6 +12,13 @@ namespace lib_entidades.Modelos
 
         [NotMapped] public Productos? _Producto { get; set; }
 
+        public bool Validar()
+        {
+            if (Producto == 0 || string.IsNullOrEmpty(Archivo) || string.IsNullOrEmpty(Informacion))
+                return false;
+            return true;
+        }
+
         public void ConvertirFormato()
         {
             // contenido del método

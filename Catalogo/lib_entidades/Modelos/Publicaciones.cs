@@ -17,6 +17,20 @@ namespace lib_entidades.Modelos
         [NotMapped] public Productos? _Producto { get; set; }
         [NotMapped] public Estados? _Estado { get; set; }
 
+        public bool Validar()
+        {
+            if (_Producto == null) 
+                return false;
+            if (_Estado == null)
+                return false;
+            if (Fecha == null)
+                return false;
+            if (string.IsNullOrEmpty(Titulo))
+                return false;
+            return true;
+
+        }
+
         public void Publicar()
         {
             // contenido del método
