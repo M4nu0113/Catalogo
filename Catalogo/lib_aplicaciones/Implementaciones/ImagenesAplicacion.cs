@@ -5,11 +5,11 @@ using System.Linq.Expressions;
 
 namespace lib_aplicaciones.Implementaciones
 {
-    public class EstadosAplicacion : IEstadosAplicacion
+    public class ImagenesAplicacion : IImagenesAplicacion
     {
-        private IEstadosRepositorio? iRepositorio = null;
+        private IImagenesRepositorio? iRepositorio = null;
 
-        public EstadosAplicacion(IEstadosRepositorio iRepositorio)
+        public ImagenesAplicacion(IImagenesRepositorio iRepositorio)
         {
             this.iRepositorio = iRepositorio;
         }
@@ -19,7 +19,7 @@ namespace lib_aplicaciones.Implementaciones
             this.iRepositorio!.Configurar(string_conexion);
         }
 
-        public Estados Borrar(Estados entidad)
+        public Imagenes Borrar(Imagenes entidad)
         {
             if (entidad == null || !entidad.Validar())
                 throw new Exception("lbFaltaInformacion");
@@ -31,7 +31,7 @@ namespace lib_aplicaciones.Implementaciones
             return entidad;
         }
 
-        public Estados Guardar(Estados entidad)
+        public Imagenes Guardar(Imagenes entidad)
         {
             if (entidad == null || !entidad.Validar())
                 throw new Exception("lbFaltaInformacion");
@@ -43,23 +43,24 @@ namespace lib_aplicaciones.Implementaciones
             return entidad;
         }
 
-        public List<Estados> Listar()
+        public List<Imagenes> Listar()
         {
             return iRepositorio!.Listar();
         }
 
-        public List<Estados> Buscar(Estados entidad, string tipo)
+        public List<Imagenes> Buscar(Imagenes entidad, string tipo)
         {
-            Expression<Func<Estados, bool>>? condiciones = null;
+            Expression<Func<Imagenes, bool>>? condiciones = null;
             switch (tipo.ToUpper())
             {
-                case "NOMBRE": condiciones = x => x.Nombre!.Contains(entidad.Nombre!); break;
+                case "ARCHIVO": condiciones = x => x.Archivo!.Contains(entidad.Archivo!); break;
+                case "PRODUCTO": condiciones = x => x.Producto == entidad.Producto; break;
                 default: condiciones = x => x.Id == entidad.Id; break;
             }
             return this.iRepositorio!.Buscar(condiciones);
         }
 
-        public Estados Modificar(Estados entidad)
+        public Imagenes Modificar(Imagenes entidad)
         {
             if (entidad == null || !entidad.Validar())
                 throw new Exception("lbFaltaInformacion");

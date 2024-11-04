@@ -5,11 +5,11 @@ using System.Linq.Expressions;
 
 namespace lib_aplicaciones.Implementaciones
 {
-    public class EstadosAplicacion : IEstadosAplicacion
+    public class PublicacionesAplicacion : IPublicacionesAplicacion
     {
-        private IEstadosRepositorio? iRepositorio = null;
+        private IPublicacionesRepositorio? iRepositorio = null;
 
-        public EstadosAplicacion(IEstadosRepositorio iRepositorio)
+        public PublicacionesAplicacion(IPublicacionesRepositorio iRepositorio)
         {
             this.iRepositorio = iRepositorio;
         }
@@ -19,7 +19,7 @@ namespace lib_aplicaciones.Implementaciones
             this.iRepositorio!.Configurar(string_conexion);
         }
 
-        public Estados Borrar(Estados entidad)
+        public Publicaciones Borrar(Publicaciones entidad)
         {
             if (entidad == null || !entidad.Validar())
                 throw new Exception("lbFaltaInformacion");
@@ -31,7 +31,7 @@ namespace lib_aplicaciones.Implementaciones
             return entidad;
         }
 
-        public Estados Guardar(Estados entidad)
+        public Publicaciones Guardar(Publicaciones entidad)
         {
             if (entidad == null || !entidad.Validar())
                 throw new Exception("lbFaltaInformacion");
@@ -43,23 +43,26 @@ namespace lib_aplicaciones.Implementaciones
             return entidad;
         }
 
-        public List<Estados> Listar()
+        public List<Publicaciones> Listar()
         {
             return iRepositorio!.Listar();
         }
 
-        public List<Estados> Buscar(Estados entidad, string tipo)
+        public List<Publicaciones> Buscar(Publicaciones entidad, string tipo)
         {
-            Expression<Func<Estados, bool>>? condiciones = null;
+            Expression<Func<Publicaciones, bool>>? condiciones = null;
             switch (tipo.ToUpper())
             {
-                case "NOMBRE": condiciones = x => x.Nombre!.Contains(entidad.Nombre!); break;
+                case "TITULO": condiciones = x => x.Titulo!.Contains(entidad.Titulo!); break;
+                case "FECHA": condiciones = x => x.Fecha == entidad.Fecha; break;
+                case "ESTADO": condiciones = x => x.Estado == entidad.Estado; break;
+                case "PRODUCTO": condiciones = x => x.Producto == entidad.Producto; break;
                 default: condiciones = x => x.Id == entidad.Id; break;
             }
             return this.iRepositorio!.Buscar(condiciones);
         }
 
-        public Estados Modificar(Estados entidad)
+        public Publicaciones Modificar(Publicaciones entidad)
         {
             if (entidad == null || !entidad.Validar())
                 throw new Exception("lbFaltaInformacion");

@@ -5,6 +5,7 @@ namespace lib_repositorios.Interfaces
 {
     public interface IPublicacionesRepositorio
     {
+        void Configurar(string string_conexion);
         List<Publicaciones> Listar();
         List<Publicaciones> Buscar(Expression<Func<Publicaciones, bool>> condiciones);
         Publicaciones Guardar(Publicaciones entidad);

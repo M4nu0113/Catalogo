@@ -5,11 +5,11 @@ using System.Linq.Expressions;
 
 namespace lib_aplicaciones.Implementaciones
 {
-    public class EstadosAplicacion : IEstadosAplicacion
+    public class ProductosAplicacion : IProductosAplicacion
     {
-        private IEstadosRepositorio? iRepositorio = null;
+        private IProductosRepositorio? iRepositorio = null;
 
-        public EstadosAplicacion(IEstadosRepositorio iRepositorio)
+        public ProductosAplicacion(IProductosRepositorio iRepositorio)
         {
             this.iRepositorio = iRepositorio;
         }
@@ -19,7 +19,7 @@ namespace lib_aplicaciones.Implementaciones
             this.iRepositorio!.Configurar(string_conexion);
         }
 
-        public Estados Borrar(Estados entidad)
+        public Productos Borrar(Productos entidad)
         {
             if (entidad == null || !entidad.Validar())
                 throw new Exception("lbFaltaInformacion");
@@ -31,7 +31,7 @@ namespace lib_aplicaciones.Implementaciones
             return entidad;
         }
 
-        public Estados Guardar(Estados entidad)
+        public Productos Guardar(Productos entidad)
         {
             if (entidad == null || !entidad.Validar())
                 throw new Exception("lbFaltaInformacion");
@@ -43,23 +43,28 @@ namespace lib_aplicaciones.Implementaciones
             return entidad;
         }
 
-        public List<Estados> Listar()
+        public List<Productos> Listar()
         {
             return iRepositorio!.Listar();
         }
 
-        public List<Estados> Buscar(Estados entidad, string tipo)
+        public List<Productos> Buscar(Productos entidad, string tipo)
         {
-            Expression<Func<Estados, bool>>? condiciones = null;
+            Expression<Func<Productos, bool>>? condiciones = null;
             switch (tipo.ToUpper())
             {
                 case "NOMBRE": condiciones = x => x.Nombre!.Contains(entidad.Nombre!); break;
+                case "CODIGO": condiciones = x => x.Codigo!.Contains(entidad.Codigo!); break;
+                case "PRECIO": condiciones = x => x.Precio == entidad.Precio; break;
+                case "DESDE PRECIO": condiciones = x => x.Precio >= entidad.Precio; break;
+                case "FABRICANTE": condiciones = x => x.Fabricante == entidad.Fabricante; break;
+                case "CATEGORIA": condiciones = x => x.Categoria == entidad.Categoria; break;
                 default: condiciones = x => x.Id == entidad.Id; break;
             }
             return this.iRepositorio!.Buscar(condiciones);
         }
 
-        public Estados Modificar(Estados entidad)
+        public Productos Modificar(Productos entidad)
         {
             if (entidad == null || !entidad.Validar())
                 throw new Exception("lbFaltaInformacion");

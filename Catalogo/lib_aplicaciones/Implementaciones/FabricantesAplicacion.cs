@@ -5,11 +5,11 @@ using System.Linq.Expressions;
 
 namespace lib_aplicaciones.Implementaciones
 {
-    public class EstadosAplicacion : IEstadosAplicacion
+    public class FabricantesAplicacion : IFabricantesAplicacion
     {
-        private IEstadosRepositorio? iRepositorio = null;
+        private IFabricantesRepositorio? iRepositorio = null;
 
-        public EstadosAplicacion(IEstadosRepositorio iRepositorio)
+        public FabricantesAplicacion(IFabricantesRepositorio iRepositorio)
         {
             this.iRepositorio = iRepositorio;
         }
@@ -19,7 +19,7 @@ namespace lib_aplicaciones.Implementaciones
             this.iRepositorio!.Configurar(string_conexion);
         }
 
-        public Estados Borrar(Estados entidad)
+        public Fabricantes Borrar(Fabricantes entidad)
         {
             if (entidad == null || !entidad.Validar())
                 throw new Exception("lbFaltaInformacion");
@@ -31,7 +31,7 @@ namespace lib_aplicaciones.Implementaciones
             return entidad;
         }
 
-        public Estados Guardar(Estados entidad)
+        public Fabricantes Guardar(Fabricantes entidad)
         {
             if (entidad == null || !entidad.Validar())
                 throw new Exception("lbFaltaInformacion");
@@ -43,14 +43,14 @@ namespace lib_aplicaciones.Implementaciones
             return entidad;
         }
 
-        public List<Estados> Listar()
+        public List<Fabricantes> Listar()
         {
             return iRepositorio!.Listar();
         }
 
-        public List<Estados> Buscar(Estados entidad, string tipo)
+        public List<Fabricantes> Buscar(Fabricantes entidad, string tipo)
         {
-            Expression<Func<Estados, bool>>? condiciones = null;
+            Expression<Func<Fabricantes, bool>>? condiciones = null;
             switch (tipo.ToUpper())
             {
                 case "NOMBRE": condiciones = x => x.Nombre!.Contains(entidad.Nombre!); break;
@@ -59,7 +59,7 @@ namespace lib_aplicaciones.Implementaciones
             return this.iRepositorio!.Buscar(condiciones);
         }
 
-        public Estados Modificar(Estados entidad)
+        public Fabricantes Modificar(Fabricantes entidad)
         {
             if (entidad == null || !entidad.Validar())
                 throw new Exception("lbFaltaInformacion");
