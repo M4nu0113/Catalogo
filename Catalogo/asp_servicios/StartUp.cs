@@ -27,8 +27,10 @@ namespace asp_servicios
             services.AddScoped<Conexion, Conexion>();
             // Repositorios
             services.AddScoped<IEstadosRepositorio, EstadosRepositorio>();
+            services.AddScoped<ICategoriasRepositorio, CategoriasRepositorio>();
             // Aplicaciones
             services.AddScoped<IEstadosAplicacion, EstadosAplicacion>();
+            services.AddScoped<ICategoriasAplicacion, CategoriasAplicacion>();
             // Controladores
             services.AddScoped<TokenController, TokenController>();
 
