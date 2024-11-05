@@ -13,6 +13,11 @@ namespace lib_repositorios.Implementaciones
             this.conexion = conexion;
         }
 
+        public void Configurar(string string_conexion)
+        {
+            this.conexion!.StringConnection = string_conexion;
+        }
+
         public List<Estados> Listar()
         {
             return conexion!.Listar<Estados>();
