@@ -28,9 +28,17 @@ namespace asp_servicios
             // Repositorios
             services.AddScoped<IEstadosRepositorio, EstadosRepositorio>();
             services.AddScoped<ICategoriasRepositorio, CategoriasRepositorio>();
+            services.AddScoped<IFabricantesRepositorio, FabricantesRepositorio>();
+            services.AddScoped<IImagenesRepositorio, ImagenesRepositorio>();
+            services.AddScoped<IProductosRepositorio, ProductosRepositorio>();
+            services.AddScoped<IPublicacionesRepositorio, PublicacionesRepositorio>();
             // Aplicaciones
             services.AddScoped<IEstadosAplicacion, EstadosAplicacion>();
             services.AddScoped<ICategoriasAplicacion, CategoriasAplicacion>();
+            services.AddScoped<IFabricantesAplicacion, FabricantesAplicacion>();
+            services.AddScoped<IImagenesAplicacion, ImagenesAplicacion>();
+            services.AddScoped<IProductosAplicacion, ProductosAplicacion>();
+            services.AddScoped<IPublicacionesAplicacion, PublicacionesAplicacion>();
             // Controladores
             services.AddScoped<TokenController, TokenController>();
 
