@@ -1,0 +1,6 @@
+D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\obj\Debug\net8.0\lib_comunicaciones.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\obj\Debug\net8.0\lib_comunicaciones.AssemblyInfoInputs.cache
+D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\obj\Debug\net8.0\lib_comunicaciones.AssemblyInfo.cs
+D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\obj\Debug\net8.0\lib_comunicaciones.csproj.CoreCompileInputs.cache
+D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\obj\Debug\net8.0\lib_comunicaciones.sourcelink.json
+D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\obj\Debug\net8.0\lib_comunicaciones.csproj.AssemblyReference.cache

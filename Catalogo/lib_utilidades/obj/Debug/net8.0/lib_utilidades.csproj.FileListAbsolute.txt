@@ -11,3 +11,16 @@ C:\Users\manue\OneDrive\Documentos\Programacion-de-software\PjCatalogo\ProyectoC
 C:\Users\manue\OneDrive\Documentos\Programacion-de-software\PjCatalogo\ProyectoCatalogo\Catalogo\lib_utilidades\obj\Debug\net8.0\refint\lib_utilidades.dll
 C:\Users\manue\OneDrive\Documentos\Programacion-de-software\PjCatalogo\ProyectoCatalogo\Catalogo\lib_utilidades\obj\Debug\net8.0\lib_utilidades.pdb
 C:\Users\manue\OneDrive\Documentos\Programacion-de-software\PjCatalogo\ProyectoCatalogo\Catalogo\lib_utilidades\obj\Debug\net8.0\ref\lib_utilidades.dll
+D:\code\ProyectoCatalogo\Catalogo\lib_utilidades\bin\Debug\net8.0\lib_utilidades.deps.json
+D:\code\ProyectoCatalogo\Catalogo\lib_utilidades\bin\Debug\net8.0\lib_utilidades.dll
+D:\code\ProyectoCatalogo\Catalogo\lib_utilidades\bin\Debug\net8.0\lib_utilidades.pdb
+D:\code\ProyectoCatalogo\Catalogo\lib_utilidades\obj\Debug\net8.0\lib_utilidades.csproj.AssemblyReference.cache
+D:\code\ProyectoCatalogo\Catalogo\lib_utilidades\obj\Debug\net8.0\lib_utilidades.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\ProyectoCatalogo\Catalogo\lib_utilidades\obj\Debug\net8.0\lib_utilidades.AssemblyInfoInputs.cache
+D:\code\ProyectoCatalogo\Catalogo\lib_utilidades\obj\Debug\net8.0\lib_utilidades.AssemblyInfo.cs
+D:\code\ProyectoCatalogo\Catalogo\lib_utilidades\obj\Debug\net8.0\lib_utilidades.csproj.CoreCompileInputs.cache
+D:\code\ProyectoCatalogo\Catalogo\lib_utilidades\obj\Debug\net8.0\lib_utilidades.sourcelink.json
+D:\code\ProyectoCatalogo\Catalogo\lib_utilidades\obj\Debug\net8.0\lib_utilidades.dll
+D:\code\ProyectoCatalogo\Catalogo\lib_utilidades\obj\Debug\net8.0\refint\lib_utilidades.dll
+D:\code\ProyectoCatalogo\Catalogo\lib_utilidades\obj\Debug\net8.0\lib_utilidades.pdb
+D:\code\ProyectoCatalogo\Catalogo\lib_utilidades\obj\Debug\net8.0\ref\lib_utilidades.dll

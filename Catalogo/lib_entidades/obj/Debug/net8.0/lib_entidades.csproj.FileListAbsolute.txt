@@ -23,3 +23,16 @@ C:\Users\manue\OneDrive\Documentos\Programacion-de-software\PjCatalogo\ProyectoC
 C:\Users\manue\OneDrive\Documentos\Programacion-de-software\PjCatalogo\ProyectoCatalogo\Catalogo\lib_entidades\obj\Debug\net8.0\refint\lib_entidades.dll
 C:\Users\manue\OneDrive\Documentos\Programacion-de-software\PjCatalogo\ProyectoCatalogo\Catalogo\lib_entidades\obj\Debug\net8.0\lib_entidades.pdb
 C:\Users\manue\OneDrive\Documentos\Programacion-de-software\PjCatalogo\ProyectoCatalogo\Catalogo\lib_entidades\obj\Debug\net8.0\ref\lib_entidades.dll
+D:\code\ProyectoCatalogo\Catalogo\lib_entidades\bin\Debug\net8.0\lib_entidades.deps.json
+D:\code\ProyectoCatalogo\Catalogo\lib_entidades\bin\Debug\net8.0\lib_entidades.dll
+D:\code\ProyectoCatalogo\Catalogo\lib_entidades\bin\Debug\net8.0\lib_entidades.pdb
+D:\code\ProyectoCatalogo\Catalogo\lib_entidades\obj\Debug\net8.0\lib_entidades.csproj.AssemblyReference.cache
+D:\code\ProyectoCatalogo\Catalogo\lib_entidades\obj\Debug\net8.0\lib_entidades.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\ProyectoCatalogo\Catalogo\lib_entidades\obj\Debug\net8.0\lib_entidades.AssemblyInfoInputs.cache
+D:\code\ProyectoCatalogo\Catalogo\lib_entidades\obj\Debug\net8.0\lib_entidades.AssemblyInfo.cs
+D:\code\ProyectoCatalogo\Catalogo\lib_entidades\obj\Debug\net8.0\lib_entidades.csproj.CoreCompileInputs.cache
+D:\code\ProyectoCatalogo\Catalogo\lib_entidades\obj\Debug\net8.0\lib_entidades.sourcelink.json
+D:\code\ProyectoCatalogo\Catalogo\lib_entidades\obj\Debug\net8.0\lib_entidades.dll
+D:\code\ProyectoCatalogo\Catalogo\lib_entidades\obj\Debug\net8.0\refint\lib_entidades.dll
+D:\code\ProyectoCatalogo\Catalogo\lib_entidades\obj\Debug\net8.0\lib_entidades.pdb
+D:\code\ProyectoCatalogo\Catalogo\lib_entidades\obj\Debug\net8.0\ref\lib_entidades.dll
