@@ -4,3 +4,13 @@ D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\obj\Debug\net8.0\lib_comuni
 D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\obj\Debug\net8.0\lib_comunicaciones.csproj.CoreCompileInputs.cache
 D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\obj\Debug\net8.0\lib_comunicaciones.sourcelink.json
 D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\obj\Debug\net8.0\lib_comunicaciones.csproj.AssemblyReference.cache
+D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\bin\Debug\net8.0\lib_comunicaciones.deps.json
+D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\bin\Debug\net8.0\lib_comunicaciones.dll
+D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\bin\Debug\net8.0\lib_comunicaciones.pdb
+D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\bin\Debug\net8.0\lib_utilidades.dll
+D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\bin\Debug\net8.0\lib_utilidades.pdb
+D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\obj\Debug\net8.0\lib_comu.F975EA67.Up2Date
+D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\obj\Debug\net8.0\lib_comunicaciones.dll
+D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\obj\Debug\net8.0\refint\lib_comunicaciones.dll
+D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\obj\Debug\net8.0\lib_comunicaciones.pdb
+D:\code\ProyectoCatalogo\Catalogo\lib_comunicaciones\obj\Debug\net8.0\ref\lib_comunicaciones.dll

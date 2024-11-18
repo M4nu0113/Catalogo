@@ -2,12 +2,12 @@
 
 namespace lib_presentaciones.Interfaces
 {
-    public interface IEstadosPresentacion
+    public interface IImagenesPresentacion
     {
-        Task<List<Casas>> Listar();
-        Task<List<Casas>> Buscar(Casas entidad, string tipo);
-        Task<Casas> Guardar(Casas entidad);
-        Task<Casas> Modificar(Casas entidad);
-        Task<Casas> Borrar(Casas entidad);
+        Task<List<Imagenes>> Listar();
+        Task<List<Imagenes>> Buscar(Imagenes entidad, string tipo);
+        Task<Imagenes> Guardar(Imagenes entidad);
+        Task<Imagenes> Modificar(Imagenes entidad);
+        Task<Imagenes> Borrar(Imagenes entidad);
     }
 }
