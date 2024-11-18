@@ -2,6 +2,9 @@
 using lib_comunicaciones.Interfaces;
 using lib_presentaciones.Implementaciones;
 using lib_presentaciones.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using asp_presentacion.Data;
 
 namespace asp_presentacion
 {
@@ -38,6 +41,9 @@ namespace asp_presentacion
             {
                 options.IdleTimeout = TimeSpan.FromMinutes(30);
             });
+
+            services.AddDbContext<asp_presentacionContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("asp_presentacionContext")));
         }
 
         public void Configure(WebApplication app, IWebHostEnvironment env)
