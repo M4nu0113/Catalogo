@@ -14,7 +14,17 @@ namespace asp_presentacion.Pages
 
         public void OnGet()
         {
-
+            try
+            {
+                //var variable_session = HttpContext.Session.GetString("usuario");
+                //if (String.IsNullOrEmpty(variable_session))
+                //    HttpContext.Session.SetString("usuario", "Pruebas");
+                ViewData["Logeado"] = true;
+            }
+            catch (Exception ex)
+            {
+                ViewData["Logeado"] = false;
+            }
         }
     }
 }

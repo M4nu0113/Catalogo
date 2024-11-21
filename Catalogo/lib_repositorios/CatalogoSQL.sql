@@ -9,6 +9,22 @@ CREATE TABLE [Estados] (
 );
 GO
 
+CREATE TABLE [Roles](
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+    [Rol] NVARCHAR(50) NOT NULL
+);
+GO
+
+CREATE TABLE [Usuarios](
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+    [Nombre] NVARCHAR(50) NOT NULL,
+	[Correo] NVARCHAR(250) NOT NULL,
+	[Contraseña] NVARCHAR(50) NOT NULL,
+	[Rol] INT NOT NULL DEFAULT 1,
+	CONSTRAINT [FK_Usuarios_Rol] FOREIGN KEY ([Rol]) REFERENCES [Roles] ([Id]) ON DELETE No Action ON UPDATE No Action,
+);
+GO
+
 CREATE TABLE [Categorias] (
     [Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
     [Categoria] NVARCHAR(50) NOT NULL
@@ -60,6 +76,17 @@ GO
 -- Insertar datos en la tabla Estados
 INSERT INTO Estados ([Nombre]) VALUES ('Disponible');
 INSERT INTO Estados ([Nombre]) VALUES ('No Disponible');
+GO
+
+-- Insertar datos en la tabla Roles
+INSERT INTO Roles ([Rol]) VALUES ('Cliente');
+INSERT INTO Roles ([Rol]) VALUES ('Admin');
+GO
+
+-- Insertar datos en la tabla Roles
+INSERT INTO Usuarios ([Nombre], [Correo],[Contraseña],[Rol]) VALUES ('AA', 'andresalbanes@correo.com', 'programacion2024', 2);
+INSERT INTO Usuarios ([Nombre], [Correo],[Contraseña],[Rol]) VALUES ('MV', 'manuelaestrada@correo.com', 'programacion2024', 2);
+INSERT INTO Usuarios ([Nombre], [Correo],[Contraseña],[Rol]) VALUES ('EC', 'emanuelcardona@correo.com', 'programacion2024', 2);
 GO
 
 -- Insertar datos en la tabla Categorias

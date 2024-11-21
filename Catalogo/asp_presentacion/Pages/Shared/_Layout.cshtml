@@ -37,7 +37,7 @@
                     </ul>
                     <!-- Opciones de Usuario -->
                     <ul class="navbar-nav">
-                        @if (User.Identity?.IsAuthenticated ?? false)
+                        @if (ViewData.ContainsKey("Logeado"))
                         {
                             <!-- Usuario autenticado -->
                             <li class="nav-item">
