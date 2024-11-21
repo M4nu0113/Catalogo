@@ -39,7 +39,7 @@ GO
 CREATE TABLE [Imagenes] (
     [Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
     [Producto] INT NOT NULL,
-    [Archivo] NVARCHAR(255) NOT NULL,
+    [Archivo] NVARCHAR(MAX) NOT NULL,
     [Informacion] TEXT NULL,
 	CONSTRAINT [FK_Imagen_Producto] FOREIGN KEY ([Producto]) REFERENCES [Productos] ([Id]) ON DELETE No Action ON UPDATE No Action
 );
