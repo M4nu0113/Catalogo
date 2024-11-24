@@ -34,6 +34,34 @@ namespace lib_repositorios
         {
             return this.Set<T>().Where(condiciones).ToList();
         }
+        public virtual List<Productos> Buscar(Expression<Func<Productos, bool>> condiciones)
+        {
+            return this.Set<Productos>()
+                .Include(x => x._Categoria)
+                .Include(x => x._Fabricante)
+                .Where(condiciones)
+                .ToList();
+        }
+        public virtual List<Imagenes> Buscar(Expression<Func<Imagenes, bool>> condiciones)
+        {
+            return this.Set<Imagenes>()
+                .Include(x => x._Producto)
+                .Include(x => x._Producto._Categoria)
+                .Include(x => x._Producto._Fabricante)
+                .Where(condiciones)
+                .ToList();
+        }
+
+        public virtual List<Publicaciones> Buscar(Expression<Func<Publicaciones, bool>> condiciones)
+        {
+            return this.Set<Publicaciones>()
+                .Include(x => x._Producto)
+                .Include(x => x._Estado)
+                .Include(x => x._Producto._Categoria)
+                .Include(x => x._Producto._Fabricante)
+                .Where(condiciones)
+                .ToList();
+        }
 
         public virtual bool Existe<T>(Expression<Func<T, bool>> condiciones) where T : class, new()
         {

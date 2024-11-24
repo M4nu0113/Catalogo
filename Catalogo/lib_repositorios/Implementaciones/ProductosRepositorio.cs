@@ -20,7 +20,7 @@ namespace lib_repositorios.Implementaciones
 
         public List<Productos> Listar()
         {
-            return conexion!.Listar<Productos>();
+            return Buscar(x => x != null);
         }
         public List<Productos> Buscar(Expression<Func<Productos, bool>> condiciones)
         {
