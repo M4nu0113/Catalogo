@@ -46,6 +46,8 @@ namespace lib_repositorios
         {
             return this.Set<Imagenes>()
                 .Include(x => x._Producto)
+                .Include(x => x._Producto._Categoria)
+                .Include(x => x._Producto._Fabricante)
                 .Where(condiciones)
                 .ToList();
         }
@@ -55,6 +57,8 @@ namespace lib_repositorios
             return this.Set<Publicaciones>()
                 .Include(x => x._Producto)
                 .Include(x => x._Estado)
+                .Include(x => x._Producto._Categoria)
+                .Include(x => x._Producto._Fabricante)
                 .Where(condiciones)
                 .ToList();
         }
