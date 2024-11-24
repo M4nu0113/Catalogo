@@ -12,10 +12,8 @@ namespace lib_entidades.Modelos
         public string? Titulo { get; set; }
         public string? Descripcion { get; set; }
 
-        
-
-        [NotMapped] public Productos? _Producto { get; set; }
-        [NotMapped] public Estados? _Estado { get; set; }
+        [ForeignKey("Producto")] public Productos? _Producto { get; set; }
+        [ForeignKey("Estado")] public Estados? _Estado { get; set; }
 
         public bool Validar()
         {

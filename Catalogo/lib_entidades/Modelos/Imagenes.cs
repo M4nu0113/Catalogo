@@ -10,7 +10,7 @@ namespace lib_entidades.Modelos
         public string? Archivo { get; set; }
         public string? Informacion { get; set; }
 
-        [NotMapped] public Productos? _Producto { get; set; }
+        [ForeignKey("Producto")] public Productos? _Producto { get; set; }
 
         public bool Validar()
         {

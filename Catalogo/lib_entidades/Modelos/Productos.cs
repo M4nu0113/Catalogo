@@ -14,8 +14,8 @@ namespace lib_entidades.Modelos
         public int Fabricante { get; set; }
         public int Categoria { get; set; }
 
-        [NotMapped] public Fabricantes? _Fabricante { get; set; }
-        [NotMapped] public Categorias? _Categoria { get; set; }
+        [ForeignKey("Fabricante")] public Fabricantes? _Fabricante { get; set; }
+        [ForeignKey("Categoria")] public Categorias? _Categoria { get; set; }
 
         public bool Validar()
         {

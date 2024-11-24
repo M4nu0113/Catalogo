@@ -20,7 +20,7 @@ namespace lib_repositorios.Implementaciones
 
         public List<Imagenes> Listar()
         {
-            return conexion!.Listar<Imagenes>();
+            return Buscar(x => x != null);
         }
         public List<Imagenes> Buscar(Expression<Func<Imagenes, bool>> condiciones)
         {
