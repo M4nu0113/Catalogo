@@ -12,8 +12,10 @@
           "MSTest.TestFramework": "3.1.1",
           "Microsoft.NET.Test.Sdk": "17.8.0",
           "coverlet.collector": "6.0.0",
+          "lib_comunicaciones": "1.0.0",
           "lib_entidades": "1.0.0",
           "lib_repositorios": "1.0.0",
+          "lib_utilidades": "1.0.0",
           "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions": "14.0.0.0"
         },
         "runtime": {
@@ -894,6 +896,17 @@
           }
         }
       },
+      "lib_comunicaciones/1.0.0": {
+        "dependencies": {
+          "lib_utilidades": "1.0.0"
+        },
+        "runtime": {
+          "lib_comunicaciones.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "lib_entidades/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.8",
@@ -914,6 +927,17 @@
         },
         "runtime": {
           "lib_repositorios.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "lib_utilidades/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "runtime": {
+          "lib_utilidades.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1390,12 +1414,22 @@
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
+    "lib_comunicaciones/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "lib_entidades/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "lib_repositorios/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "lib_utilidades/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

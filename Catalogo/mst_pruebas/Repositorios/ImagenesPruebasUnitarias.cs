@@ -14,7 +14,8 @@ namespace mst_pruebas.Repositorios
         {
             var conexion = new Conexion();
             conexion.StringConnection = "server=M4NU_HELPER\\DEV;database=bd_catalogo;uid=sa;pwd=STEMgirls>>>; TrustServerCertificate = true; ";
-            iRepositorio = new ImagenesRepositorio(conexion);
+            var auditorias = new AuditoriasRepositorio(conexion);
+            iRepositorio = new ImagenesRepositorio(conexion, auditorias);
         }
         [TestMethod]
         public void Ejecutar()
