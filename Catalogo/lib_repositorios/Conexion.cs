@@ -20,6 +20,7 @@ namespace lib_repositorios
         protected DbSet<Productos>? Productos { get; set; }
         protected DbSet<Imagenes>? Imagenes { get; set; }
         protected DbSet<Publicaciones>? Publicaciones { get; set; }
+        protected DbSet<Auditorias>? Auditorias { get; set; }
         public virtual DbSet<T> ObtenerSet<T>() where T : class, new()
         {
             return this.Set<T>();

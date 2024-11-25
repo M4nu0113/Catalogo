@@ -73,6 +73,15 @@ CREATE TABLE [Publicaciones] (
 );
 GO
 
+CREATE TABLE [Auditorias] (
+	[Id] INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	[Tabla] NVARCHAR(50) NOT NULL,
+	[Referencia] INT NOT NULL,
+	[Accion] NVARCHAR(50) NOT NULL,
+	[Fecha] SMALLDATETIME NOT NULL DEFAULT GETDATE()
+);
+GO
+
 -- Insertar datos en la tabla Estados
 INSERT INTO Estados ([Nombre]) VALUES ('Disponible');
 INSERT INTO Estados ([Nombre]) VALUES ('No Disponible');
