@@ -26,6 +26,8 @@ namespace asp_presentacion
             services.AddScoped<IProductosComunicacion, ProductosComunicacion>();
             services.AddScoped<IPublicacionesComunicacion, PublicacionesComunicacion>();
             services.AddScoped<ICategoriasComunicacion, CategoriasComunicacion>();
+            services.AddScoped<IUsuariosComunicacion, UsuariosComunicacion>();
+
             // Presentaciones
             services.AddScoped<IEstadosPresentacion, EstadosPresentacion>();
             services.AddScoped<IFabricantesPresentacion, FabricantesPresentacion>();
@@ -33,6 +35,7 @@ namespace asp_presentacion
             services.AddScoped<IProductosPresentacion, ProductosPresentacion>();
             services.AddScoped<IPublicacionesPresentacion, PublicacionesPresentacion>();
             services.AddScoped<ICategoriasPresentacion, CategoriasPresentacion>();
+            services.AddScoped<IUsuariosPresentacion, UsuariosPresentacion>();
 
             services.AddControllers();
             services.AddEndpointsApiExplorer();

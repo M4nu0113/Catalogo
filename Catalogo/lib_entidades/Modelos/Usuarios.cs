@@ -9,7 +9,7 @@ namespace lib_entidades.Modelos
         public string? Email { get; set; }
         public string? Nombre { get; set; }
         public string? Contraseña { get; set; }
-        public int Rol { get; set; }
+        public int Rol { get; set; } = 1;
         [ForeignKey("Rol")] public Roles? _Rol { get; set; }
 
         public bool Validar()
