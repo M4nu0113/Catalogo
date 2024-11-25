@@ -29,13 +29,13 @@
                                 Categorías
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownCategorias">
-                                <li><a class="dropdown-item" asp-area="" asp-page="Ventanas/Computadores">Computadores</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-page="Ventanas/Productos">Productos</a></li>
                                 <li><a class="dropdown-item" asp-area="" asp-page="Ventanas/Telefonos">Teléfonos</a></li>
                                 <li><a class="dropdown-item" asp-area="" asp-page="Ventanas/Tabletas">Tabletas</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <!-- Opciones de Usuario -->
+                    @* <!-- Opciones de Usuario -->
                     <ul class="navbar-nav">
                         @if (ViewData.ContainsKey("Logeado"))
                         {
@@ -59,7 +59,7 @@
                                 <a class="nav-link text-dark" asp-area="" asp-page="/Cuenta/Register">Registrarse</a>
                             </li>
                         }
-                    </ul>
+                    </ul> *@
                 </div>
             </div>
         </nav>

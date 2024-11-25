@@ -7,7 +7,7 @@ namespace lib_comunicaciones
         public string? Protocolo = "http://",
             //Host = "localhost:5056",
             // "localhost:5204", //Conexion Ema
-            Host = "localhost:5056",
+            Host = "localhost:5204",
             Servicio = "",// "asp_catalogo_servicios/",
             Nombre = string.Empty,
             Final = string.Empty,
