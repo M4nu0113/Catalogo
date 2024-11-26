@@ -2,15 +2,34 @@ using lib_utilidades;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Razor.TagHelpers;
+using Microsoft.EntityFrameworkCore;
+using lib_presentaciones.Interfaces;
+using lib_entidades.Modelos;
+using Microsoft.CodeAnalysis.Elfie.Serialization;
 
 namespace asp_presentacion.Pages
 {
     public class IndexModel : PageModel
     {
         public bool EstaLogueado = false;
-        [BindProperty] public string? Email { get; set; }
-        [BindProperty] public string? Contraseña { get; set; }
+        private IUsuariosPresentacion? iUsuariosPresentacion = null;
+
+        public IndexModel(IUsuariosPresentacion iUsuariosPresentacion)
+        {
+            try
+            {
+                this.iUsuariosPresentacion = iUsuariosPresentacion;
+            }
+            catch (Exception ex)
+            {
+                LogConversor.Log(ex, ViewData!);
+            }
+        }
+
         [BindProperty] public string? Nombre { get; set; }
+        [BindProperty] public string? Correo { get; set; }
+        [BindProperty] public string? Contraseña { get; set; }
+        
 
         public void OnGet()
         {
@@ -26,9 +45,10 @@ namespace asp_presentacion.Pages
         {
             try
             {
-                Email = string.Empty;
-                Contraseña = string.Empty;
                 Nombre = string.Empty;
+                Correo = string.Empty;
+                Contraseña = string.Empty;
+                
             }
             catch (Exception ex)
             {
@@ -40,29 +60,70 @@ namespace asp_presentacion.Pages
         {
             try
             {
-                if (string.IsNullOrEmpty(Email) &&
-                    string.IsNullOrEmpty(Contraseña) && 
-                    string.IsNullOrEmpty(Nombre))
+                // Validar que los campos no estén vacíos antes de consultar la base de datos.
+                if (string.IsNullOrEmpty(Nombre) ||
+                    string.IsNullOrEmpty(Correo) ||
+                    string.IsNullOrEmpty(Contraseña))
                 {
-                    OnPostBtClean();
+                    ViewData["Error"] = "Todos los campos son obligatorios.";
                     return;
                 }
 
-                if ("Usuario.123" != Email + "." + Contraseña)
+                // Verificar credenciales en la base de datos.
+                if (ValidarUsuario(Nombre, Correo, Contraseña))
                 {
-                    OnPostBtClean();
-                    return;
+                    // Si el usuario es válido, iniciar sesión.
+                    ViewData["Logged"] = true;
+                    HttpContext.Session.SetString("Usuario", Correo);
+                    EstaLogueado = true;
+                    HttpContext.Response.Redirect("/");
+
                 }
-                ViewData["Logged"] = true;
-                HttpContext.Session.SetString("Usuario", Email!);
-                EstaLogueado = true;
-                OnPostBtClean();
+                else
+                {
+                    // Si las credenciales no son válidas, mostrar un mensaje de error.
+                    ViewData["Error"] = "Credenciales inválidas. Verifique su información.";
+                    OnPostBtClean();
+                }
             }
             catch (Exception ex)
             {
-                LogConversor.Log(ex, ViewData!);
+                // Manejo de errores, se registra en el log.
+                LogConversor.Log(ex, ViewData);
             }
         }
+
+        // Método para validar el usuario en la base de datos.
+        private bool ValidarUsuario(string nombre, string correo, string contraseña)
+        {
+            try
+            {
+                // Consultar la base de datos para verificar si el usuario existe.
+                var usuarioBusqueda = new Usuarios
+                {
+                    Nombre = nombre,
+                    Correo = correo,
+                    Contraseña = contraseña
+                };
+                var task = iUsuariosPresentacion!.Buscar(usuarioBusqueda, "Validacion");
+                task.Wait();
+                var usuario = task.Result.FirstOrDefault();
+
+                if (usuario == null)
+                {
+                    return false;
+                }
+
+                return true;
+                
+            }
+            catch (Exception ex)
+            {
+                LogConversor.Log(ex, ViewData);
+                return false;
+            }
+        }
+
 
         public void OnPostBtClose()
         {

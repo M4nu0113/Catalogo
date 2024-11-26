@@ -6,7 +6,7 @@ namespace lib_entidades.Modelos
     public class Usuarios
     {
         [Key] public int Id { get; set; }
-        public string? Email { get; set; }
+        public string? Correo { get; set; }
         public string? Nombre { get; set; }
         public string? Contraseña { get; set; }
         public int Rol { get; set; } = 1;
@@ -14,7 +14,7 @@ namespace lib_entidades.Modelos
 
         public bool Validar()
         {
-            if (string.IsNullOrEmpty(Email))
+            if (string.IsNullOrEmpty(Correo))
                 return false;
             if (string.IsNullOrEmpty(Nombre))
                 return false;

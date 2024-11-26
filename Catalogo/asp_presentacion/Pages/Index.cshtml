@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Home page";
 }
-@* @if (!Model.EstaLogueado)
+@if (!Model.EstaLogueado)
 
 {
     <div class="container"
@@ -28,7 +28,7 @@
                         Email:
                     </label>
                     <input onchange="keyUp(this)"
-                           asp-for="@Model.Email"
+                           asp-for="@Model.Correo"
                            class="form-control" />
                 </div>
                 <div class="form-group">
@@ -69,4 +69,4 @@ else
                    class="btn btn-default" />
         </form>
     </div>
-} *@
+} 
