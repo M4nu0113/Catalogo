@@ -14,7 +14,7 @@ namespace lib_entidades.Modelos
 
         public bool Validar()
         {
-            if (_Producto == null)
+            if (Producto == 0)
                 return false;
             if (string.IsNullOrEmpty(Archivo))
                 return false;

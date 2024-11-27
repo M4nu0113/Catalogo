@@ -17,9 +17,9 @@ namespace lib_entidades.Modelos
 
         public bool Validar()
         {
-            if (_Producto == null) 
+            if (Producto == 0) 
                 return false;
-            if (_Estado == null)
+            if (Estado == 0)
                 return false;
             if (Fecha == null)
                 return false;

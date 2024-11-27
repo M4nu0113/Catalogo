@@ -5,9 +5,9 @@ namespace lib_comunicaciones
     public class Comunicaciones
     {
         public string? Protocolo = "http://",
-            //Host = "localhost:5056",
+            //Host = "localhost:64365",
             // "localhost:5204", //Conexion Ema
-            Host = "localhost:5204",
+            Host = "localhost:64366",
             Servicio = "",// "asp_catalogo_servicios/",
             Nombre = string.Empty,
             Final = string.Empty,

@@ -15,7 +15,7 @@ namespace asp_presentacion.Pages.Ventanas
         private ICategoriasPresentacion? iCategoriasPresentacion = null;
 
         public ProductosModel(IProductosPresentacion iPresentacion,
-            IFabricantesPresentacion iTiposPresentacion, ICategoriasPresentacion iCategoriasPresentacion)
+            IFabricantesPresentacion iFabricantesPresentacion, ICategoriasPresentacion iCategoriasPresentacion)
         {
             try
             {
@@ -44,12 +44,12 @@ namespace asp_presentacion.Pages.Ventanas
         {
             try
             {
-                //var variable_session = HttpContext.Session.GetString("Usuario");
-                //if (String.IsNullOrEmpty(variable_session))
-                //{
-                //    HttpContext.Response.Redirect("/");
-                //    return;
-                //}
+                var variable_session = HttpContext.Session.GetString("Usuario");
+                if (String.IsNullOrEmpty(variable_session))
+                {
+                    HttpContext.Response.Redirect("/");
+                    return;
+                }
 
                 Filtro!.Nombre = Filtro!.Nombre ?? "";
 
