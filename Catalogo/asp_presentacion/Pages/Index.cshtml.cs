@@ -98,7 +98,6 @@ namespace asp_presentacion.Pages
         {
             try
             {
-                // Consultar la base de datos para verificar si el usuario existe.
                 var usuarioBusqueda = new Usuarios
                 {
                     Nombre = nombre,

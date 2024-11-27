@@ -54,7 +54,7 @@ namespace lib_aplicaciones.Implementaciones
             switch (tipo.ToUpper())
             {
                 case "NOMBRE": condiciones = x => x.Nombre!.Contains(entidad.Nombre!); break;
-                case "EMAIL": condiciones = x => x.Email!.Contains(entidad.Email!); break;
+                case "EMAIL": condiciones = x => x.Correo!.Contains(entidad.Correo!); break;
                 case "CONTRASEÑA": condiciones = x => x.Contraseña!.Contains(entidad.Contraseña!); break;
                 case "ROL": condiciones = x => x.Rol == entidad.Rol; break;
                 default: condiciones = x => x.Id == entidad.Id; break;

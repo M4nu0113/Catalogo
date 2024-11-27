@@ -29,9 +29,9 @@ namespace lib_entidades.Modelos
                 return false;
             if (Costo == 0)
                 return false;
-            if (_Categoria == null) 
+            if (Categoria == 0) 
                 return false;
-            if(_Fabricante == null)
+            if(Fabricante == 0)
                 return false;
             return true;
         }
