@@ -66,29 +66,24 @@ namespace asp_presentacion.Pages
                     string.IsNullOrEmpty(Contraseña))
                 {
                     ViewData["Error"] = "Todos los campos son obligatorios.";
+                    OnPostBtClean();
                     return;
                 }
 
-                // Verificar credenciales en la base de datos.
                 if (ValidarUsuario(Nombre, Correo, Contraseña))
                 {
-                    // Si el usuario es válido, iniciar sesión.
                     ViewData["Logged"] = true;
-                    HttpContext.Session.SetString("Usuario", Correo);
-                    EstaLogueado = true;
-                    HttpContext.Response.Redirect("/");
-
+                    HttpContext.Session.SetString("Usuario", Correo!);
+                    EstaLogueado = true; 
                 }
                 else
                 {
-                    // Si las credenciales no son válidas, mostrar un mensaje de error.
                     ViewData["Error"] = "Credenciales inválidas. Verifique su información.";
                     OnPostBtClean();
                 }
             }
             catch (Exception ex)
             {
-                // Manejo de errores, se registra en el log.
                 LogConversor.Log(ex, ViewData);
             }
         }
