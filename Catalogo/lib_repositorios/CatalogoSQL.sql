@@ -93,9 +93,9 @@ INSERT INTO Roles ([Rol]) VALUES ('Admin');
 GO
 
 -- Insertar datos en la tabla Roles
-INSERT INTO Usuarios ([Nombre], [Correo],[Contraseña],[Rol]) VALUES ('AA', 'andresalbanes@correo.com', 'programacion2024', 2);
-INSERT INTO Usuarios ([Nombre], [Correo],[Contraseña],[Rol]) VALUES ('MV', 'manuelaestrada@correo.com', 'programacion2024', 2);
-INSERT INTO Usuarios ([Nombre], [Correo],[Contraseña],[Rol]) VALUES ('EC', 'emanuelcardona@correo.com', 'programacion2024', 2);
+INSERT INTO Usuarios ([Nombre], [Email],[Contraseña],[Rol]) VALUES ('AA', 'andresalbanes@correo.com', 'programacion2024', 2);
+INSERT INTO Usuarios ([Nombre], [Email],[Contraseña],[Rol]) VALUES ('MV', 'manuelaestrada@correo.com', 'programacion2024', 2);
+INSERT INTO Usuarios ([Nombre], [Email],[Contraseña],[Rol]) VALUES ('EC', 'emanuelcardona@correo.com', 'programacion2024', 2);
 GO
 
 -- Insertar datos en la tabla Categorias

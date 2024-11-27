@@ -27,7 +27,7 @@ namespace asp_presentacion.Pages
         }
 
         [BindProperty] public string? Nombre { get; set; }
-        [BindProperty] public string? Correo { get; set; }
+        [BindProperty] public string? Email { get; set; }
         [BindProperty] public string? Contraseña { get; set; }
         
 
@@ -46,7 +46,7 @@ namespace asp_presentacion.Pages
             try
             {
                 Nombre = string.Empty;
-                Correo = string.Empty;
+                Email = string.Empty;
                 Contraseña = string.Empty;
                 
             }
@@ -62,7 +62,7 @@ namespace asp_presentacion.Pages
             {
                 // Validar que los campos no estén vacíos antes de consultar la base de datos.
                 if (string.IsNullOrEmpty(Nombre) ||
-                    string.IsNullOrEmpty(Correo) ||
+                    string.IsNullOrEmpty(Email) ||
                     string.IsNullOrEmpty(Contraseña))
                 {
                     ViewData["Error"] = "Todos los campos son obligatorios.";
@@ -70,10 +70,10 @@ namespace asp_presentacion.Pages
                     return;
                 }
 
-                if (ValidarUsuario(Nombre, Correo, Contraseña))
+                if (ValidarUsuario(Nombre, Email, Contraseña))
                 {
                     ViewData["Logged"] = true;
-                    HttpContext.Session.SetString("Usuario", Correo!);
+                    HttpContext.Session.SetString("Usuario", Email!);
                     EstaLogueado = true; 
                 }
                 else
@@ -96,7 +96,7 @@ namespace asp_presentacion.Pages
                 var usuarioBusqueda = new Usuarios
                 {
                     Nombre = nombre,
-                    Correo = correo,
+                    Email = correo,
                     Contraseña = contraseña
                 };
                 var task = iUsuariosPresentacion!.Buscar(usuarioBusqueda, "Validacion");
